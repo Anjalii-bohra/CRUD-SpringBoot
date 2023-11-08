@@ -19,11 +19,16 @@ public class StudentService {
         return students;
     }
 
-    public void addStudent(Student student) {
-        studentRepository.save(student);
+    public void addStudent(Integer id, String name, String branch) {
+        Student studentUser = new Student();
+        studentUser.setId(id);
+        studentUser.setName(name);
+        studentUser.setBranch(branch);
+        studentRepository.save(studentUser);
     }
 
     public void updateStudent(Integer id, Student student) {
+
         studentRepository.save(student);
     }
 

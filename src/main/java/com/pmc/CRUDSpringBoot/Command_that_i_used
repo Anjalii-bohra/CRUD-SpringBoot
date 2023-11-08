@@ -1,0 +1,31 @@
+Add 
+
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl -X POST -H "Content-Type: application/json" -d "{\"id\": 124, \"name\
+": \"John Doe\", \"branch\": \"Computer Science\"}" http://localhost:8080/students/add
+Student added successfully.
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl -X POST -H "Content-Type: application/json" -d "{\"id\": 156, \"name\
+": \"Arpana\", \"branch\": \"IT\"}" http://localhost:8080/students/add
+Student added successfully.
+
+List
+
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl http://localhost:8080/students/list
+[{"id":1,"name":"John Doe","branch":"Computer Science"},{"id":2,"name":"Anjali Bohra","branch":"Computer Science"},{"id":3,"name":"John Doe","branch":"Computer Science"},{"id":4,"name":"Arpana","branch":"IT"}]
+
+Delete
+
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl -X DELETE http://localhost:8080/students/delete/123
+
+List
+
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl http://localhost:8080/students/list
+[{"id":1,"name":"John Doe","branch":"Computer Science"},{"id":2,"name":"Anjali Bohra","branch":"Computer Science"},{"id":3,"name":"John Doe","branch":"Computer Science"},{"id":4,"name":"Arpana","branch":"IT"}]
+
+Update
+
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl -X PUT -H "Content-Type: application/json" -d "{\"id\": 139, \"name\": \"Anjali\", \"branch\": \"IT\"}" http://localhost:8080/students/update/139
+
+List
+
+C:\Users\bohraa\IdeaProjects\CRUD-SpringBoot\src\main\java\com\pmc\CRUDSpringBoot>curl http://localhost:8080/students/list
+[{"id":1,"name":"John Doe","branch":"Computer Science"},{"id":2,"name":"Anjali Bohra","branch":"Computer Science"},{"id":3,"name":"John Doe","branch":"Computer Science"},{"id":4,"name":"Arpana","branch":"IT"},{"id":5,"name":"Anjali","branch":"IT"}]

@@ -17,6 +17,10 @@ public class Student {
         this.branch = branch;
     }
 
+    public Student() {
+
+    }
+
     public Integer getId() {
         return id;
     }
